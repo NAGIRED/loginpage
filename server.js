@@ -9,6 +9,9 @@ const db = new sqlite3.Database('./database.sqlite');
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'login.html'));
 });
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
 
 // Middleware
 app.use(bodyParser.urlencoded({ extended: false }));
